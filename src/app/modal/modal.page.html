@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Consent</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size-sm="12" >
+        <ion-list>
+          <label>Doctor Name</label>
+          <ion-item class="ion-item">              
+
+
+        <ion-input type="text" ngModel
+        name="name"
+        required
+        placeholder="Doctor Name"
+         text-right id="input" ></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-sm="6">
+        <ion-checkbox [(ngModel)]="isChecked" name="checkedbtn"></ion-checkbox> confirm
+      </ion-col>
+    </ion-row>
+    <ion-row>
+     
+      
+      <ion-button
+      type="submit"
+      expand="block"
+      [disabled]="!f.valid"
+      class="btncolor"
+    >
+      Submit
+    </ion-button>
+    </ion-row>
+  </ion-grid>
+  </form>
+
+</ion-content>

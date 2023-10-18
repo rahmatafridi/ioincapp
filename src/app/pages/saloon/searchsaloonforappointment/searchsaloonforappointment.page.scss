@@ -1,0 +1,36 @@
+ion-item
+{
+	--border-style: 0px solid;
+	overflow: unset;
+	.ion-auto-complete
+	{
+		overflow: unset !important;
+		z-index: 9999 !important;
+		left:0px;
+	}
+}
+.button-search
+{
+    width: 95%;
+    border-radius: 10px;
+    background-color: darkviolet;
+    color: white;
+	align-items: unset;
+	height: 100%;
+}
+ion-auto-complete ul
+{
+	overflow: unset !important;
+	z-index: 9999 !important;
+	left:0px;
+}
+
+
+div ion-icon
+{
+	left: 5px !important;
+}
+
+a{
+	color: darkviolet;
+}

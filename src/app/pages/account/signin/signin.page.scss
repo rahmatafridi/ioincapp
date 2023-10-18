@@ -1,0 +1,70 @@
+.ng-invalid{
+    border-bottom-color: var(--ion-color-danger);
+}
+
+.sign-in-welcome h2
+{
+  width: 100%;
+  text-align: center;
+  color:  #8224e3;
+}
+
+.sign-in-header
+{
+  text-align: center;
+  vertical-align: middle;
+  color:  #8224e3;
+  font-size: 18px; font-weight: bold;
+}
+.ion-item
+{
+  border-radius: 50px;
+  overflow: hidden;
+  border: 1px solid #8224e3;
+  margin-top: 10px;
+  min-height: 30px;
+  padding: 0px;
+}
+
+.native-input.sc-ion-input-md
+{
+    padding: 0px;
+}
+
+.item-interactive
+{
+    --border-width: 0px 0px 0px 0px;
+}
+
+.btncolor {
+    --background: var(--ion-color-custom);
+    border-radius: 50px;
+    overflow: hidden;
+  }
+
+  .required
+  {
+      color: red;
+  }
+
+
+
+  .error
+  {
+    color: red;
+  }
+
+  .ion-item .item-native
+  {
+    border: 0px solid !important;
+  }
+
+  .ion-col-sign-up
+  {
+    text-align: center;
+    
+  }
+
+  a{
+    color: var(--ion-color-custom);
+  }

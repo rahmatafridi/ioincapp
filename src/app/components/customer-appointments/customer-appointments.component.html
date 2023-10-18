@@ -1,0 +1,27 @@
+<div style="width: 100%;" *ngFor="let appointment of userAppointmentResponse">
+  <ion-item>
+          
+    <ion-card class="md-12">
+      <ion-card-header>    
+        <ion-label>{{appointment.saloonName}}</ion-label>    
+        <ion-label>{{appointment.doctorFirstName +' '+appointment.doctorLastName}}</ion-label>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <p><ion-icon name="home-outline"></ion-icon> {{appointment.saloonAddress}}</p>
+        <p><ion-icon name="mail-outline"></ion-icon> {{appointment.saloonEmail}}</p>
+        <p><ion-icon name="call-outline"></ion-icon> {{appointment.saloonPhone}}</p>
+        
+        <p><ion-icon name="calendar-outline"></ion-icon> {{appointment.date | date: 'MMM dd, yyyy'}} <ion-icon name="alarm-outline"></ion-icon> {{appointment.startTime}} - {{appointment.endTime}}</p>
+                
+        <p>
+          <ion-label style="color: darkviolet;" item-end>Status: {{appointment.state.value}}</ion-label>
+          <ion-button class="appointment-button"  fill="outline" *ngIf="appointment.canCancel && appointment.stateId == 2" (click)="CancelAppointment(appointment.id)" item-end >Cancel</ion-button>
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </ion-item>    
+</div>
+<div  style="width: 100%;margin-left: 10px; margin-top: 10px;" class="col-12" *ngIf="userAppointmentResponse != null && userAppointmentResponse.length ==0">
+  Currently no appointment is scheduled.
+</div>

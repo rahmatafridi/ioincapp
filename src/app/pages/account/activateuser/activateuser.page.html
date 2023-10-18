@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+<ion-grid>
+  <ion-row>
+    <ion-col size-sm="6" offset-sm="3" class="header">ACCOUNT ACTIVATION</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size-sm="6" offset-sm="3">
+      <div *ngIf="isActivated == true">
+        Your account is activated. Click  <a  [routerLink]="['/signin']">here</a> to sign-in.
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

@@ -1,0 +1,43 @@
+
+  ion-card
+  {
+      --padding-start:0px;
+      margin-top: 5px;;
+      padding: 0px;
+     
+      width: 100%;
+      border-radius: 30px;
+      overflow: hidden;
+  }
+  ion-card-content
+{
+    border: 0px solid;
+    border-style:none;
+}
+  ion-item
+    {
+        --border-style: 0px solid;
+    }
+  .appointment-button
+  {
+    color: #ffffff;
+    background-color: #8224e3;
+    float: right;
+    border-radius: 50px;
+    --border-color:0px;
+    width: 95%;
+    border-radius: 10px;
+  }
+
+.button-outline
+{
+    float:right;
+}
+
+.button-search
+{
+    width: 80%;
+    border-radius: 10px;
+    background-color: darkviolet;
+    color: white;
+}

@@ -1,0 +1,40 @@
+.ion-item
+{
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #12081b;
+  margin-top: 10px;
+  min-height: 30px;
+  padding: 0px;
+}
+.btncolor {
+    --background: var(--ion-color-custom);
+    border-radius: 50px;
+    overflow: hidden;
+  }
+  .required
+  {
+      color: red;
+  }
+
+
+
+  .error
+  {
+    color: red;
+  }
+
+  .ion-item .item-native
+  {
+    border: 0px solid !important;
+  }
+
+  .ion-col-sign-up
+  {
+    text-align: center;
+    
+  }
+
+  a{
+    color: var(--ion-color-custom);
+  }

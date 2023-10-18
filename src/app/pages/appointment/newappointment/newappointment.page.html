@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="width: 100%;" class="col-12" *ngFor="let appointmentSlot of appointmentSlots">
+    <ion-item *ngFor="let slot of appointmentSlot.slots">
+            
+      <ion-card class="md-12">
+        <ion-card-header>  
+          <div>
+          <ion-icon name="person-sharp"></ion-icon>  {{appointmentSlot.doctorName}}
+        </div>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <p><ion-icon name="calendar-outline"></ion-icon> {{appointmentSlot.date | date: 'MMM dd, yyyy'}} <ion-icon name="alarm-outline"></ion-icon> {{slot.startHour}} - {{slot.endHour}}</p>
+
+          
+          <p>
+            <ion-button class="appointment-button"  fill="outline" *ngIf="!slot.isOccupied" item-end (click)="BookNow(appointmentSlot.saloonId,appointmentSlot.doctorId,appointmentSlot.date,slot.startHour,slot.endHour)">Book Now</ion-button>
+            <ion-button class="appointment-button"  fill="outline" *ngIf="slot.isOccupied" item-end >Occupied</ion-button>
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>    
+  </div>
+  <div style="width: 100%; padding: 10px;" class="col-12" *ngIf="appointmentSlots && appointmentSlots.length == 0">
+    No appointment slot is available. Please try other day.
+  </div>
+</ion-content>

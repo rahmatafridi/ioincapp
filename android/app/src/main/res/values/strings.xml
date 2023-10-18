@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">pressdots</string>
+    <string name="title_activity_main">pressdots</string>
+    <string name="package_name">com.pressdots.app</string>
+    <string name="custom_url_scheme">com.pressdots.app</string>
+</resources>

@@ -1,0 +1,28 @@
+<div style="width: 100%;" *ngFor="let appointment of userAppointmentResponse">
+  <ion-item>
+          
+    <ion-card class="md-12">
+      <ion-card-header>    
+        <ion-label>{{appointment.saloon.saloonName}}</ion-label>    
+        <ion-label>{{appointment.doctor.firstname +' '+appointment.doctor.lastname}}</ion-label>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <hr class="solid">
+        <p> {{appointment.customer.firstname +' '+appointment.customer.lastname}}</p>
+        <p><ion-icon name="mail-outline"></ion-icon> {{appointment.customer.email}}</p>
+        <p><ion-icon name="call-outline"></ion-icon> {{appointment.customer.mobileNumber}}</p>
+        
+        <p><ion-icon name="calendar-outline"></ion-icon> {{appointment.date | date: 'MMM dd, yyyy'}} <ion-icon name="alarm-outline"></ion-icon> {{appointment.startTime}} - {{appointment.endTime}}</p>
+                
+        <p>
+          <ion-label style="color: darkviolet;" item-end>Status: {{appointment.state.value}}</ion-label>
+          
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </ion-item>    
+</div>
+<div  style="width: 100%;margin-left: 10px; margin-top: 10px;" class="col-12" *ngIf="userAppointmentResponse != null && userAppointmentResponse.length ==0">
+  There are no appointment(s) in archive.
+</div>

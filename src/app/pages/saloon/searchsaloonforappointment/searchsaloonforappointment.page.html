@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item id="backbutton" style="display: none;">
+    <ion-icon name="arrow-back"></ion-icon>
+    <a style="cursor: pointer;" (click)="OnBackClick()">Back</a>
+  </ion-item>
+  
+  <ion-item id="buttonlocation" style="margin-top: 10px;">
+    <button class="button-search" item-right (click)="ShowSearchOption('Location')">
+      <ion-icon name="search-outline" type="button"></ion-icon> Search By Location
+    </button>
+  </ion-item>
+
+  <ion-item id="or">
+    <p style="text-align:center; width: 100%;"> Or</p>
+  </ion-item>
+
+  <ion-item id="buttonsaloon">
+    <button class="button-search" item-right (click)="ShowSearchOption('Saloon')">
+      <ion-icon name="search-outline" type="button"></ion-icon> Search By Saloon
+    </button>
+  </ion-item>
+
+  <ion-item id="location" style="z-index: 9999; display: none;">
+
+    <ion-auto-complete [(ngModel)]="locationSearch" [dataProvider]="locationService"
+      [options]="{ placeholder : 'Enter location',debounce:1000 }" class="ion-auto-complete"></ion-auto-complete>
+
+
+  </ion-item>
+  <ion-item id="saloon" style="z-index: 999; display: none;">
+
+    <ion-auto-complete [(ngModel)]="saloonSearch" [dataProvider]="saloonService"
+      [options]="{ placeholder : 'Enter Saloon',debounce:1000 }" class="ion-auto-complete"></ion-auto-complete>
+
+
+  </ion-item>
+  <ion-item id="date" style="z-index:99; display: none;">
+    <ion-icon name="calendar-outline"></ion-icon>
+    <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="selectedDate" data="YYYY-MM-DD"
+      style="width: 100%; padding-left: 0px;" [min]="minDate" max="2099" minuteValues="0,15,30,45"
+      placeholder="Select date"></ion-datetime>
+
+
+  </ion-item>
+
+
+
+  <ion-item id="button" style=" display: none;">
+    <button class="button-search" item-right (click)="searchSaloons()">
+      <ion-icon name="search-outline" type="button"></ion-icon> Search Saloons
+    </button>
+    <ion-label>{{message}}</ion-label>
+  </ion-item>
+
+  <ion-list *ngFor="let saloon of saloonList">
+    <ion-item [routerLink]="['/','newappointment',saloon.id,selectedDate]" detail>
+      <ion-label>{{saloon.saloonName}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "204311326164",
+    "project_id": "pressdots-cfd72",
+    "storage_bucket": "pressdots-cfd72.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204311326164:android:8235fe001a678a60613a41",
+        "android_client_info": {
+          "package_name": "com.pressdots.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "204311326164-v0plidbt77jj2sj6kgg8lsv512u1usd4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTt-JY3-qsSNOj8ZU2pzSbsBFlKj0MKec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "204311326164-v0plidbt77jj2sj6kgg8lsv512u1usd4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

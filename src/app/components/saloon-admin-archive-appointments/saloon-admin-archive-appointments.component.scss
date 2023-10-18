@@ -1,0 +1,26 @@
+ion-item
+{
+    --inner-border-width:0px 0px 0px 0px;
+    --padding-start:10px;
+    
+}
+
+ion-card-header
+{
+    --background:#8224e3;
+    color: white;
+}
+
+ion-card
+{
+    border-radius:20px;
+}
+.appointment-button
+  {
+    color: #ffffff;
+    background-color: #8224e3;
+    border-radius: 50px;
+    --border-color:0px;
+    width:120px;
+    border-radius: 10px;
+  }

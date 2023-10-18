@@ -1,0 +1,38 @@
+.btncolor {
+    --background: var(--ion-color-custom);
+    border-radius: 50px;
+    overflow: hidden;
+  }
+
+  .ion-item
+{
+  border-radius: 50px;
+  overflow: hidden;
+  border: 1px solid var(--ion-color-custom);
+  margin-top: 10px;
+  min-height: 45px;
+  padding: 0px;
+}
+.native-input.sc-ion-input-md
+{
+    padding: 0px;
+}
+.item-interactive
+{
+    --border-width:0 0 0px 0;
+}
+.item-label-floating
+{
+    min-height: 35px;
+}
+.register-header
+{
+  text-align: center;
+  vertical-align: middle;
+  color:  var(--ion-color-custom);
+  font-size: 18px; font-weight: bold;
+}
+.input
+{
+  padding: 0px;
+}

@@ -1,0 +1,12 @@
+
+<ion-grid>
+  <ion-row >
+    <ion-col size="6" *ngFor="let product of products">
+      <img src="{{product.image}}"  height="200" >
+      <p>{{product.name}}</p>
+      <ion-button color="primary" (click)="OnBuyClick(product.link)">Buy Now</ion-button>
+    </ion-col>
+    
+  </ion-row>
+ 
+</ion-grid>

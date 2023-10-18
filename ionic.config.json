@@ -1,0 +1,8 @@
+{
+  "name": "pressdots",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

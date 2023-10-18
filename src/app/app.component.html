@@ -1,0 +1,62 @@
+<ion-app>
+  
+    <ion-menu contentId="main-content" >
+      <ion-header>
+        <ion-toolbar translucent>
+          
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-title>{{loggedInUserName}}</ion-title>
+        <ion-list>
+          <ion-menu-toggle>
+          <ion-item>
+            <ion-icon src="assets/icon/business-report.svg" slot="start" button [routerLink]="['/home']" routerLinkActive="router-link-active" ></ion-icon>
+            <ion-label [routerLink]="['/home']">Dashboard</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle *ngIf="loggedInUserRoleId == 2">
+          <ion-item>
+            <ion-icon src="assets/icon/medical-appointment.svg" slot="start" [routerLink]="['/my-appointments']"></ion-icon>
+            <ion-label [routerLink]="['/my-appointments']">Active Appointments</ion-label>
+          </ion-item>  
+        </ion-menu-toggle>  
+        <ion-menu-toggle  *ngIf="loggedInUserRoleId == 2">
+          <ion-item>
+            <ion-icon src="assets/icon/medical-appointment.svg" slot="start" [routerLink]="['/searchsaloonforappointment']"></ion-icon>
+            <ion-label [routerLink]="['/searchsaloonforappointment']">New Appointments</ion-label>
+          </ion-item>  
+        </ion-menu-toggle>  
+        <ion-menu-toggle  *ngIf="loggedInUserRoleId == 2">
+          <ion-item >
+            <ion-icon src="assets/icon/archive.svg" slot="start"  [routerLink]="['/archive-appointments']"></ion-icon>
+            <ion-label [routerLink]="['/archive-appointments']">Archived Appointments</ion-label>
+          </ion-item>
+        </ion-menu-toggle>  
+        <ion-menu-toggle  *ngIf="loggedInUserRoleId == 6">
+          <ion-item >
+            <ion-icon src="assets/icon/archive.svg" slot="start"  [routerLink]="['/saloon-admin-archive']"></ion-icon>
+            <ion-label [routerLink]="['/saloon-admin-archive']">Archived Appointments</ion-label>
+          </ion-item>
+        </ion-menu-toggle>  
+        <ion-menu-toggle>
+          <ion-item >
+            <ion-icon src="assets/icon/password.svg" slot="start"  [routerLink]="['/changepassword']"></ion-icon>
+            <ion-label [routerLink]="['/changepassword']">Change Password</ion-label>
+          </ion-item>
+        </ion-menu-toggle>  
+          <ion-menu-toggle>
+          <ion-item  button (click)="SignOut()">
+            <ion-icon src="assets/icon/logout.svg" slot="start"></ion-icon>
+            <ion-label>Signout</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        </ion-list>
+
+        
+      </ion-content>
+    </ion-menu>
+    
+
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-app>
